@@ -1,0 +1,98 @@
+void ILI9341_HSD2.4_Initial(void)
+{
+// VCI=2.8V
+//************* Reset LCD Driver ****************//
+LCD_nRESET = 1;
+delayms(1); // Delay 1ms
+LCD_nRESET = 0;
+delayms(10); // Delay 10ms // This delay time is necessary
+LCD_nRESET = 1;
+delayms(120); // Delay 120 ms
+//************* Start Initial Sequence **********//
+LCD_ILI9341_CMD(0xCF);
+LCD_ILI9341_ Parameter (0x00);
+LCD_ILI9341_ Parameter (0xC1);
+LCD_ILI9341_ Parameter (0X30);
+LCD_ILI9341_CMD(0xED);
+LCD_ILI9341_ Parameter (0x64);
+LCD_ILI9341_ Parameter (0x03);
+LCD_ILI9341_ Parameter (0X12);
+LCD_ILI9341_ Parameter (0X81);
+LCD_ILI9341_CMD(0xE8);
+LCD_ILI9341_ Parameter (0x85);
+LCD_ILI9341_ Parameter (0x00);
+LCD_ILI9341_ Parameter (0x79);
+LCD_ILI9341_CMD(0xCB);
+LCD_ILI9341_ Parameter (0x39);
+LCD_ILI9341_ Parameter (0x2C);
+LCD_ILI9341_ Parameter (0x00);
+LCD_ILI9341_ Parameter (0x34);
+LCD_ILI9341_ Parameter (0x02);
+LCD_ILI9341_CMD(0xF7);
+LCD_ILI9341_ Parameter (0x20);
+LCD_ILI9341_CMD(0xEA);
+LCD_ILI9341_ Parameter (0x00);
+LCD_ILI9341_ Parameter (0x00);
+LCD_ILI9341_CMD(0xC0); //Power control
+LCD_ILI9341_ Parameter (0x1D); //VRH[5:0]
+LCD_ILI9341_CMD(0xC1); //Power control
+LCD_ILI9341_ Parameter (0x12); //SAP[2:0];BT[3:0]
+LCD_ILI9341_CMD(0xC5); //VCM control
+LCD_ILI9341_ Parameter (0x33);
+LCD_ILI9341_ Parameter (0x3F);
+LCD_ILI9341_CMD(0xC7); //VCM control
+LCD_ILI9341_ Parameter (0x92);
+LCD_ILI9341_CMD(0x3A); // Memory Access Control
+LCD_ILI9341_ Parameter (0x55);
+LCD_ILI9341_CMD(0x36); // Memory Access Control
+LCD_ILI9341_ Parameter (0x08);
+LCD_ILI9341_CMD(0xB1);
+LCD_ILI9341_ Parameter (0x00);
+LCD_ILI9341_ Parameter (0x12);
+LCD_ILI9341_CMD(0xB6); // Display Function Control
+LCD_ILI9341_ Parameter (0x0A);
+LCD_ILI9341_ Parameter (0xA2);
+
+LCD_ILI9341_CMD(0x44);
+LCD_ILI9341_ Parameter (0x02);
+
+LCD_ILI9341_CMD(0xF2); // 3Gamma Function Disable
+LCD_ILI9341_ Parameter (0x00);
+LCD_ILI9341_CMD(0x26); //Gamma curve selected
+LCD_ILI9341_ Parameter (0x01);
+LCD_ILI9341_CMD(0xE0); //Set Gamma
+LCD_ILI9341_ Parameter (0x0F);
+LCD_ILI9341_ Parameter (0x22);
+LCD_ILI9341_ Parameter (0x1C);
+LCD_ILI9341_ Parameter (0x1B);
+LCD_ILI9341_ Parameter (0x08);
+LCD_ILI9341_ Parameter (0x0F);
+LCD_ILI9341_ Parameter (0x48);
+LCD_ILI9341_ Parameter (0xB8);
+LCD_ILI9341_ Parameter (0x34);
+LCD_ILI9341_ Parameter (0x05);
+LCD_ILI9341_ Parameter (0x0C);
+LCD_ILI9341_ Parameter (0x09);
+LCD_ILI9341_ Parameter (0x0F);
+LCD_ILI9341_ Parameter (0x07);
+LCD_ILI9341_ Parameter (0x00);
+LCD_ILI9341_CMD(0XE1); //Set Gamma
+LCD_ILI9341_ Parameter (0x00);
+LCD_ILI9341_ Parameter (0x23);
+LCD_ILI9341_ Parameter (0x24);
+LCD_ILI9341_ Parameter (0x07);
+LCD_ILI9341_ Parameter (0x10);
+LCD_ILI9341_ Parameter (0x07);
+LCD_ILI9341_ Parameter (0x38);
+LCD_ILI9341_ Parameter (0x47);
+LCD_ILI9341_ Parameter (0x4B);
+LCD_ILI9341_ Parameter (0x0A);
+LCD_ILI9341_ Parameter (0x13);
+LCD_ILI9341_ Parameter (0x06);
+LCD_ILI9341_ Parameter (0x30);
+LCD_ILI9341_ Parameter (0x38);
+LCD_ILI9341_ Parameter (0x0F);
+LCD_ILI9341_CMD(0x11); //Exit Sleep
+Delayms(120);
+LCD_ILI9341_CMD(0x29); //Display on
+}

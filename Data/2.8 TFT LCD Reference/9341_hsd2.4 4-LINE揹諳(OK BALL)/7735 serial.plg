@@ -1,0 +1,36 @@
+<html>
+<body>
+<pre>
+<h1>礦ision3 Build Log</h1>
+<h2>Project:</h2>
+D:\我的文档\桌面\9341_hsd2.4 4-LINE串口(OK BALL)\7735 serial.uv2
+Project File Date:  04/07/2012
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling 7735 serial.c...
+7735 SERIAL.C(220): warning C280: 'k': unreferenced local variable
+7735 SERIAL.C(356): warning C206: 'Delayms': missing function-prototype
+7735 SERIAL.C(356): error C267: 'Delayms': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling 7735 serial.c...
+7735 SERIAL.C(220): warning C280: 'k': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?FRAME?7735_SERIAL
+Program Size: data=23.0 xdata=0 code=42488
+creating hex file from "7735 serial"...
+"7735 serial" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling 7735 serial.c...
+7735 SERIAL.C(220): warning C280: 'k': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?FRAME?7735_SERIAL
+Program Size: data=23.0 xdata=0 code=42488
+creating hex file from "7735 serial"...
+"7735 serial" - 0 Error(s), 2 Warning(s).
