@@ -1,5 +1,5 @@
-#include <TFT_eSPI.h> //LCD函式庫
-#include "Button2.h";
+#include <TFT_eSPI.h> // LCD函式庫
+#include <Button2.h>
 
 TFT_eSPI tft = TFT_eSPI();
 
